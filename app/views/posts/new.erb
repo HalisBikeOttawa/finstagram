@@ -1,0 +1,17 @@
+<h2>New Post</h2>
+
+<ul class="errors">
+  <% @post.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+</ul>
+
+<form method=POST action="/posts">
+    <div class="form-group">
+        <label for photo_url>Photo_URL</label>
+        <input type="text" id="tests" name="photo_url">
+    </div>
+    <div class="form-group">
+        <button type="submit">Post</button>
+    </div>
+</form>
